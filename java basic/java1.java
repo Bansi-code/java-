@@ -8,10 +8,10 @@ public class java1 {
     System.out.print(" Enter value of B : ");
     int b = sc.nextInt();
     int sum =a+b;
-    System.out.print("sum is :" +(a+b) + "\nis that right");
-    System.out.print("sub is :" +(a-b) + "\nis that right");
-    System.out.print("mul is :" +(a*b) + "\nis that right");
-    System.out.print("div is :" +(a/b) + "\nis that right");
+    System.out.println("sum is :" +(a+b) + "\nis that right");
+    System.out.println("sub is :" +(a-b) + "\nis that right");
+    System.out.println("mul is :" +(a*b) + "\nis that right");
+    System.out.println("div is :" +(a/b) + "\nis that right");
 
     }
 

@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Sorting {
     public static void Bobblesort(int array[]) {
@@ -37,6 +38,27 @@ public class Sorting {
         }
     }
 
+    public static void countingsort(int arr[]){
+        int max= Integer.MIN_VALUE;
+        for(int i =0 ; i < arr.length ; i++){
+            max = Math.max(max, arr[i]);
+          //  min = Math.min(min, arr[i]);
+        }
+        int[] count = new int[max + 1];
+        for(int i = 0 ; i < arr.length ; i++){
+            count[arr[i]]++;
+        }
+        int j =0;
+        for(int i = 0 ; i <= max ; i++){
+            while (count[i] > 0) {
+                arr[j] = i;
+                count[i]--;
+                j++;
+            }
+        }
+
+
+    }
 
     public static void printarr(int arr[]) {
         for(int i = 0 ; i < arr.length ; i++){
@@ -55,7 +77,14 @@ public class Sorting {
         printarr(bansi);
         int bansi3[] = {1,2,4,3,2,3,2,44,4};
         insertionsort(bansi3);
+        System.out.print("By insertion sorting :");
         printarr(bansi3);
-
+        int bansi4[] = {1,2,4,3,2,3,2,44,4};
+        Arrays.sort(bansi4);
+        System.out.print("By inbild sorting :");
+        printarr(bansi4);
+        int hellow[] = {1,3,4,44,2,3,2,45,4,3,2,45};
+        countingsort(hellow);
+        printarr(hellow);
     }
 }
